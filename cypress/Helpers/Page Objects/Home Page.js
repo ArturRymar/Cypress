@@ -34,6 +34,6 @@ export default class HomePage extends BaseUrl {
     this.loginPassword.type(password);
     this.loginPassword.should('have.value', password);
     this.loginButton.click();
-    cy.url().should('eq', 'https://qauto.forstudy.space/panel/garage');
+    cy.url().should('eq', `${Cypress.config('baseUrl')}panel/garage`);
   }
 }
