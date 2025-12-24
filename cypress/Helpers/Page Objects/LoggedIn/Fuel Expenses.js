@@ -58,6 +58,15 @@ export default class FuelExpensesPage {
     return this.#baseElement.getElement('.expenses .expenses_table');
   }
   get expensesTableDateValue() {
-    return this.#baseElement.getElement(".table.expenses_table tbody").first("tr:first-child");
+    return this.#baseElement.getElement(".table.expenses_table tbody tr > td").eq(0);
+  }
+  get expensesTableMileageValue() {
+    return this.#baseElement.getElement(".table.expenses_table tbody tr > td").eq(1);
+  }
+  get expensesTableLitersValue() {
+    return this.#baseElement.getElement(".table.expenses_table tbody tr > td").eq(2);
+  }
+  get expensesTableCostsValue() {
+    return this.#baseElement.getElement(".table.expenses_table tbody tr > td").eq(3);
   }
 }
