@@ -9,7 +9,7 @@
     "cypress:UI:qauto2": "npm run cypress:UI -- --browser chrome --config-file cypress.qauto2.config.js",
     "cypress:headless": "npx cypress run",
     "cypress:headless:browser:chrome": "npm run cypress:headless -- --browser chrome",
-    "cypress:headless:qauto": "npm run cypress:headless:browser:chrome -- --spec \"cypress\\e2e\\lesson21Spec.cy.js\" --config-file cypress.qauto.config.js",
+    "cypress:headless:qauto": "npm run cypress:headless:browser:chrome -- --spec \"cypress\\e2e\\lesson22Spec.cy.js\" --config-file cypress.qauto.config.js",
     "cypress:headless:qauto2": "npm run cypress:headless:browser:chrome -- --spec \"cypress\\e2e\\lesson21Spec.cy.js\" --config-file cypress.qauto2.config.js"
   },
   "author": "",
