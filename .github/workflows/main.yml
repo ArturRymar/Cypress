@@ -1,0 +1,29 @@
+# name on the GitHub Actions
+name: Cypress GitHub Actions
+# event of run
+on: workflow_dispatch
+# Job
+jobs:
+  # job id
+  cypress-test-run:
+    # job name
+    name: Running tests for Cypress
+    #application used for running job
+    runs-on: ubuntu-latest
+    # add Docker
+    container:
+      image: cypress/included:cypress-15.9.0-node-24.13.0-chrome-143.0.7499.192-1-ff-147.0-edge-143.0.3650.139-1
+    steps:
+      # open repository and clone it into our container
+      - name: Checkout
+        uses: actions/checkout@v4
+      # incstall Cypress and browsers
+      # as we use installed Cypress in the Docker image, we can skip this
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v6
+      # install npm dependencies
+      - name: Install dependencies
+        run: npm ci
+      # run test via command from package.json
+      - name: Run Сypress test
+        run: npm run cypress:headless:qauto
